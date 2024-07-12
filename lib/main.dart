@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:music_player/screens/pages/home_page.dart';
 
 void main() {
@@ -12,7 +13,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
     return MaterialApp(
+      theme: ThemeData(
+        textTheme: GoogleFonts.latoTextTheme(textTheme),
+      ),
       debugShowCheckedModeBanner: false,
       routes: {
         '/': (_) => const HomePage(),
